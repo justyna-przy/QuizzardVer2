@@ -1,16 +1,129 @@
 
+
+#AnchorPane {
+    -fx-background-image: url('starbg.png');
+    -fx-background-size: cover;
+
+}
+
+#SurvAnchor {
+    -fx-background-image: url('SurvBG.png');
+    -fx-background-size: cover;
+
+}
+
+.modeBtn {
+    -fx-border-color: #ffd858;
+    -fx-border-width: 5;
+    -fx-border-radius: 13;
+    -fx-background-radius: 20;
+
+}
+
+
+#randomBtn {
+    -fx-background-image: url('Random-modified.png');
+    -fx-background-size: cover;
+}
+
+#diffBtn {
+    -fx-background-image: url('Difficulty.png');
+    -fx-background-size: cover;
+}
+
+#topicBtn {
+    -fx-background-image: url('Subject.png');
+    -fx-background-size: cover;
+}
+
+#survivalBtn {
+    -fx-background-image: url('Survival.png');
+    -fx-background-size: cover;
+}
+
+#mathsBtn {
+    -fx-background-image: url('Dmaths.png');
+    -fx-background-size: cover;
+}
+
+#compSciBtn {
+    -fx-background-image: url('CompScience.png');
+    -fx-background-size: cover;
+}
+
+#CompOrgBtn {
+    -fx-background-image: url('CompOrga.png');
+    -fx-background-size: cover;
+}
+
+#noviceBtn {
+    -fx-background-image: url('novice1.png');
+    -fx-background-size: cover;
+}
+
+#ApprenBtn {
+    -fx-background-image: url('appren.png');
+    -fx-background-size: cover;
+}
+
+#MasterBtn {
+    -fx-background-image: url('master1.png');
+    -fx-background-size: cover;
+}
+
+
+
+
+.modeBtn:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 20, 0, 0, 0);
+    -fx-background-radius: 20;
+}
+
+#navBtn {
+    -fx-text-fill: #5a02b2;
+}
+
+#navBtn:hover {
+    -fx-text-fill: #ffd858;
+}
+
+#survivalNav {
+    -fx-text-fill: #9d8df1;
+}
+
+#survivalNav: hover {
+    -fx-text-fill: #ffd858;
+    -fx-background-color: #734AC7;
+}
+
 #nextButton {
-    -fx-background-color: #9D8DF1;
-    -fx-text-fill:  #fffaf0;
+    -fx-background-image: url('NextBefore.png');
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
 }
 
 #nextButton: hover {
-    -fx-background-color: #5a02b2;
-    -fx-text-fill:  #fffaf0;
+    -fx-background-image: url('NextAfter.png');
+
+}
+
+#nextButtonSurv {
+    -fx-background-image: url('NextBefore.png');
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#nextButtonSurv: hover {
+    -fx-background-image: url('NestSurv.png');
 
 }
 
 
+.progress-bar {
+    -fx-accent: #ffd858; /* Bar color */
+}
 
 #RadioButton .radio{
      -fx-border-width: 1px;
@@ -32,5 +145,46 @@
 #RadioButton:selected {
     -fx-mark-color:  #9D8DF1;
 
+}
+
+.table {
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-fill: #5a02b2;
+    -fx-font-weight: normal;
+    -fx-font-size: 16px;
+    -fx-color: #9d8df1;
+}
+
+.table-view {
+    -fx-skin: null;
+    -fx-background: #d2c9ff;
+    -fx-table-cell-border-color: transparent;
+    
+}
+
+.table-cell {
+    -fx-text-fill: #5a02b2; /* Set the text color */
+}
+
+/* Disable the vertical scrollbar */
+.table-view .scroll-bar:vertical {
+    -fx-opacity: 0;
+    -fx-visibility: hidden;
+}
+
+/* Disable the horizontal scrollbar */
+.table-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-visibility: hidden;
+}
+
+.table-view .scroll-bar * {
+    -fx-min-width: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
 }
 

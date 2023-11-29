@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9d8df1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.DifficultyController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9d8df1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.SubjectController">
    <stylesheets>
       <URL value="@CSS/styles.css" />
    </stylesheets>
@@ -56,7 +56,7 @@
    <center>
       <AnchorPane prefHeight="650.0" prefWidth="206.0" style="-fx-background-color: #fffaf0;" stylesheets="@CSS/styles.css" BorderPane.alignment="CENTER">
          <children>
-            <Button id="MasterBtn" fx:id="expert" layoutX="628.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectExpert" prefHeight="276.6" prefWidth="206.0" style="-fx-border-color: #ffd858; -fx-border-width: 5; -fx-border-radius: 13;" styleClass="modeBtn" stylesheets="@CSS/styles.css" textFill="#9d8df1">
+            <Button id="CompOrgBtn" fx:id="comporg" layoutX="628.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectComporg" prefHeight="276.6" prefWidth="206.0" style="-fx-border-color: #ffd858; -fx-border-width: 5; -fx-border-radius: 13;" styleClass="modeBtn" stylesheets="@CSS/styles.css" textFill="#9d8df1">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -64,7 +64,7 @@
                   <Font name="Calibri Bold" size="36.0" />
                </font>
             </Button>
-            <Button id="noviceBtn" fx:id="novice" layoutX="190.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectNovice" prefHeight="276.6" prefWidth="206.0" style="-fx-border-color: #ffd858; -fx-border-width: 5; -fx-border-radius: 13;" styleClass="modeBtn" stylesheets="@CSS/styles.css" textFill="#9d8df1">
+            <Button id="mathsBtn" fx:id="dmaths" layoutX="190.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectDMaths" prefHeight="276.6" prefWidth="206.0" style="-fx-border-color: #ffd858; -fx-border-width: 5; -fx-border-radius: 13;" styleClass="modeBtn" stylesheets="@CSS/styles.css" textFill="#9d8df1">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -72,7 +72,7 @@
                   <Font name="Calibri Bold" size="36.0" />
                </font>
             </Button>
-            <Button id="ApprenBtn" fx:id="intermed" layoutX="409.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectIntermedd" prefHeight="276.6" prefWidth="206.0" style="-fx-border-color: #ffd858; -fx-border-width: 5; -fx-border-radius: 13;" styleClass="modeBtn" stylesheets="@CSS/styles.css" textFill="#9d8df1">
+            <Button id="compSciBtn" fx:id="compsci" layoutX="409.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectCompsci" prefHeight="276.6" prefWidth="206.0" style="-fx-border-color: #ffd858; -fx-border-width: 5; -fx-border-radius: 13;" styleClass="modeBtn" stylesheets="@CSS/styles.css" textFill="#9d8df1">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -80,7 +80,7 @@
                   <Font name="Calibri Bold" size="36.0" />
                </font>
             </Button>
-            <Text fill="#5a02b2" layoutX="221.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select your magical level!">
+            <Text fill="#5a02b2" layoutX="235.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a magical subject!">
                <font>
                   <Font name="Berlin Sans FB" size="56.0" />
                </font>

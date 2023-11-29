@@ -1,51 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #E6E6E9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.HomeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9d8df1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.HomeController">
+   <stylesheets>
+      <URL value="@CSS/styles.css" />
+   </stylesheets>
    <top>
       <AnchorPane prefHeight="129.0" prefWidth="1024.0" style="-fx-background-color: #5A02B2;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="statsBtn" layoutX="660.0" layoutY="38.0" mnemonicParsing="false" onAction="#goToStats" prefHeight="55.0" prefWidth="141.0" style="-fx-background-color: #9D8DF1;" text="Stats" textFill="#0c021f">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9d8df1" height="47.0" layoutX="34.0" layoutY="46.0" stroke="#ffd858" strokeType="INSIDE" strokeWidth="4.0" width="947.0" />
+            <Button id="navBtn" fx:id="statsBtn" layoutX="665.0" layoutY="51.0" mnemonicParsing="false" onAction="#goToStats" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #9D8DF1;" stylesheets="@CSS/styles.css" text="Stats" textFill="#5a02b2">
                <font>
-                  <Font name="Calibri Bold" size="24.0" />
+                  <Font name="Berlin Sans FB" size="20.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor></Button>
-            <Button fx:id="homeBtn" layoutX="480.0" layoutY="38.0" mnemonicParsing="false" onAction="#goHome" prefHeight="55.0" prefWidth="141.0" style="-fx-background-color: #9D8DF1;" text="Home" textFill="#0c021f">
+               </cursor>
+            </Button>
+            <Button id="navBtn" fx:id="homeBtn" layoutX="560.0" layoutY="51.0" mnemonicParsing="false" onAction="#goHome" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #9D8DF1;" stylesheets="@CSS/styles.css" text="Home" textFill="#5a02b2">
                <font>
-                  <Font name="Calibri Bold" size="24.0" />
+                  <Font name="Berlin Sans FB" size="20.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor></Button>
-            <Button fx:id="exit" layoutX="840.0" layoutY="38.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="55.0" prefWidth="141.0" style="-fx-background-color: #9D8DF1;" text="Exit" textFill="#0c021f">
+               </cursor>
+            </Button>
+            <Button id="navBtn" fx:id="exit" layoutX="790.0" layoutY="51.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #9D8DF1;" stylesheets="@CSS/styles.css" text="Quiz Maker" textFill="#5a02b2">
                <font>
-                  <Font name="Calibri Bold" size="24.0" />
+                  <Font name="Berlin Sans FB" size="20.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor></Button>
-            <ImageView fitHeight="128.0" fitWidth="346.0">
+               </cursor>
+            </Button>
+            <ImageView fitHeight="119.0" fitWidth="315.0" layoutY="7.0">
                <image>
-                  <Image url="@quizfinallogo.png" />
+                  <Image url="@QuizzardLogo.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
    </top>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="650.0" prefWidth="206.0" style="-fx-background-color: #fffaf0;" stylesheets="@CSS/styles.css" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="randomBtn" layoutX="80.0" layoutY="168.0" mnemonicParsing="false" onAction="#startRandom" prefHeight="390.0" prefWidth="206.0" style="-fx-background-color: #FFFAF0; -fx-border-color: #9D8DF1; -fx-border-width: 5;" text="Random" textFill="#9d8df1">
+            <Button id="randomBtn" fx:id="randomBtn" layoutX="80.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#startRandom" prefHeight="276.6" prefWidth="206.0" style="-fx-border-color: #ffd858; -fx-border-width: 5; -fx-border-radius: 13;" styleClass="modeBtn" stylesheets="@CSS/styles.css" textFill="#9d8df1">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -53,7 +65,7 @@
                   <Font name="Calibri Bold" size="36.0" />
                </font>
             </Button>
-            <Button fx:id="subjectBtn" layoutX="518.0" layoutY="168.0" mnemonicParsing="false" onAction="#startSubject" prefHeight="390.0" prefWidth="206.0" style="-fx-background-color: #FFFAF0; -fx-border-color: #9D8DF1; -fx-border-width: 5;" text="Subject" textFill="#9d8df1">
+            <Button id="survivalBtn" fx:id="survivalBtn" layoutX="737.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#startSurvival" prefHeight="276.6" prefWidth="206.0" style="-fx-border-color: #ffd858; -fx-border-width: 5; -fx-border-radius: 13;" styleClass="modeBtn" stylesheets="@CSS/styles.css" textFill="#9d8df1">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -61,7 +73,7 @@
                   <Font name="Calibri Bold" size="36.0" />
                </font>
             </Button>
-            <Button fx:id="difficultyBtn" layoutX="299.0" layoutY="168.0" mnemonicParsing="false" onAction="#startDifficulty" prefHeight="390.0" prefWidth="206.0" style="-fx-background-color: #FFFAF0; -fx-border-color: #9D8DF1; -fx-border-width: 5;" text="Difficulty" textFill="#9d8df1">
+            <Button id="diffBtn" fx:id="difficultyBtn" layoutX="299.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#startDifficulty" prefHeight="276.6" prefWidth="206.0" style="-fx-border-color: #ffd858; -fx-border-width: 5; -fx-border-radius: 13;" styleClass="modeBtn" stylesheets="@CSS/styles.css" textFill="#9d8df1">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -69,20 +81,28 @@
                   <Font name="Calibri Bold" size="36.0" />
                </font>
             </Button>
-            <Text fill="#5a02b2" layoutX="241.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your Mode!" textAlignment="CENTER">
+            <Button id="topicBtn" fx:id="subjectBtn" layoutX="518.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#startSubject" prefHeight="276.6" prefWidth="206.0" style="-fx-border-color: #ffd858; -fx-border-width: 5; -fx-border-radius: 13;" styleClass="modeBtn" stylesheets="@CSS/styles.css" textFill="#9d8df1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                <font>
-                  <Font name="Calibri Bold" size="64.0" />
+                  <Font name="Calibri Bold" size="36.0" />
+               </font>
+            </Button>
+            <Text fill="#5a02b2" layoutX="263.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick a card, any card!">
+               <font>
+                  <Font name="Berlin Sans FB" size="56.0" />
                </font>
             </Text>
-            <Button fx:id="survivalBtn" layoutX="737.0" layoutY="168.0" mnemonicParsing="false" onAction="#startSurvival" prefHeight="390.0" prefWidth="206.0" style="-fx-background-color: #FFFAF0; -fx-border-color: #9D8DF1; -fx-border-width: 5;" text="Survival" textFill="#9d8df1">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <font>
-                  <Font name="Calibri Bold" size="36.0" />
-               </font>
-            </Button>
+            <Circle fx:id="circle" fill="#5704b000" layoutX="512.0" layoutY="308.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
          </children>
+         <effect>
+            <InnerShadow height="65.45" radius="15.8625" width="0.0">
+               <color>
+                  <Color red="0.31578946113586426" green="0.2923976480960846" blue="0.2923976480960846" />
+               </color>
+            </InnerShadow>
+         </effect>
       </AnchorPane>
    </center>
 </BorderPane>

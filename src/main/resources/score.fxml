@@ -4,88 +4,73 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #E6E6E9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ScoreController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9D8DF1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.ScoreController">
    <stylesheets>
       <URL value="@CSS/styles.css" />
    </stylesheets>
    <top>
       <AnchorPane prefHeight="129.0" prefWidth="1024.0" style="-fx-background-color: #5A02B2;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="statsBtn" layoutX="660.0" layoutY="38.0" mnemonicParsing="false" onAction="#goToStats" prefHeight="55.0" prefWidth="141.0" style="-fx-background-color: #9D8DF1;" text="Stats" textFill="#0c021f">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9d8df1" height="47.0" layoutX="34.0" layoutY="46.0" stroke="#ffd858" strokeType="INSIDE" strokeWidth="4.0" width="947.0" />
+            <Button id="navBtn" fx:id="statsBtn" layoutX="665.0" layoutY="51.0" mnemonicParsing="false" onAction="#goToStats" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #9D8DF1;" stylesheets="@CSS/styles.css" text="Stats" textFill="#5a02b2">
                <font>
-                  <Font name="Calibri Bold" size="24.0" />
+                  <Font name="Berlin Sans FB" size="20.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="homeBtn" layoutX="480.0" layoutY="38.0" mnemonicParsing="false" onAction="#goHome" prefHeight="55.0" prefWidth="141.0" style="-fx-background-color: #9D8DF1;" text="Home" textFill="#0c021f">
+            <Button id="navBtn" fx:id="homeBtn" layoutX="560.0" layoutY="51.0" mnemonicParsing="false" onAction="#goHome" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #9D8DF1;" stylesheets="@CSS/styles.css" text="Home" textFill="#5a02b2">
                <font>
-                  <Font name="Calibri Bold" size="24.0" />
+                  <Font name="Berlin Sans FB" size="20.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="exit" layoutX="840.0" layoutY="38.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="55.0" prefWidth="141.0" style="-fx-background-color: #9D8DF1;" text="Exit" textFill="#0c021f">
+            <Button id="navBtn" fx:id="exit" layoutX="790.0" layoutY="51.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #9D8DF1;" stylesheets="@CSS/styles.css" text="Quiz Maker" textFill="#5a02b2">
                <font>
-                  <Font name="Calibri Bold" size="24.0" />
+                  <Font name="Berlin Sans FB" size="20.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <ImageView fitHeight="128.0" fitWidth="346.0">
+            <ImageView fitHeight="119.0" fitWidth="315.0" layoutY="7.0">
                <image>
-                  <Image url="@quizfinallogo.png" />
+                  <Image url="@QuizzardLogo.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
    </top>
    <center>
-      <AnchorPane prefHeight="650.0" prefWidth="1059.0" BorderPane.alignment="CENTER">
+      <AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1059.0" stylesheets="@CSS/styles.css" BorderPane.alignment="CENTER">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="FLORALWHITE" height="400.0" layoutX="296.0" layoutY="115.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-: #FFFAF0;" styleClass="myRadioButton" width="400.0" />
-            <Circle fill="#9d8df1" layoutX="487.0" layoutY="380.0" radius="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-            <ImageView fitHeight="261.0" fitWidth="251.0" layoutX="162.0" layoutY="286.0">
-               <image>
-                  <Image url="@quizzard1.png" />
-               </image>
-            </ImageView>
-            <Text fill="#5a02b2" layoutX="296.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Congratulations Apprentice!" textAlignment="CENTER" wrappingWidth="395.4870910644531">
-               <font>
-                  <Font name="Calibri Bold" size="36.0" />
-               </font>
-            </Text>
-            <Label fx:id="score" layoutX="469.0" layoutY="337.0" prefHeight="82.0" prefWidth="38.0" textAlignment="CENTER" textFill="#5a02b2">
-               <font>
-                  <Font name="Calibri Bold" size="72.0" />
-               </font>
-            </Label>
-            <Button fx:id="scoreButton" layoutX="415.0" layoutY="240.0" mnemonicParsing="false" onAction="#revealScore" style="-fx-background-color: #5A02B2; -fx-border-color: #ffd858; -fx-border-width: 1;" text="Reveal Score" textFill="#ffd858">
-               <font>
-                  <Font name="Calibri Bold" size="24.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Label layoutX="389.0" layoutY="469.0" text="Answered Correctly" textFill="#9d8df1">
-               <font>
-                  <Font name="Calibri Bold" size="24.0" />
-               </font>
-            </Label>
-            <Button id="nextButton" fx:id="nextStats" layoutX="646.0" layoutY="452.0" mnemonicParsing="false" onAction="#onNextStatsButtonClicked" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 45px;" text="Next" textFill="FLORALWHITE">
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="FLORALWHITE" height="434.0" layoutX="352.0" layoutY="86.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-: #FFFAF0;" styleClass="myRadioButton" width="332.0">
+               <effect>
+                  <DropShadow height="52.58" radius="25.4975" width="51.41">
+                     <color>
+                        <Color red="0.179106667637825" green="0.01679999940097332" blue="0.2800000011920929" opacity="0.5075988173484802" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Rectangle>
+            <Button id="nextButton" fx:id="next" layoutX="611.0" layoutY="407.0" mnemonicParsing="false" onAction="#onNextButtonClicked" prefHeight="170.0" prefWidth="164.0">
                <font>
                   <Font name="Calibri Bold" size="24.0" />
                </font>
@@ -96,8 +81,52 @@
                   <URL value="@CSS/styles.css" />
                   <URL value="@CSS/styles.css" />
                </stylesheets>
+               <effect>
+                  <DisplacementMap>
+                     <mapData>
+                        <FloatMap />
+                     </mapData>
+                  </DisplacementMap>
+               </effect>
             </Button>
+            <ImageView fitHeight="291.0" fitWidth="135.0" layoutX="66.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="296.0" fitWidth="268.0" layoutX="146.0" layoutY="268.0">
+               <image>
+                  <Image url="@quizzard1.png" />
+               </image>
+            </ImageView>
+            <Text fill="#5a02b2" layoutX="404.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Well done, Apprentice!" textAlignment="CENTER" wrappingWidth="223.726806640625">
+               <font>
+                  <Font name="Berlin Sans FB" size="45.0" />
+               </font>
+            </Text>
+            <Label fx:id="percentage" layoutX="428.0" layoutY="240.0" text="You got 100%!" textFill="#9d8df1">
+               <font>
+                  <Font name="Berlin Sans FB" size="30.0" />
+               </font>
+            </Label>
+            <Circle fill="#9c8df0eb" layoutX="522.0" layoutY="392.0" radius="93.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <InnerShadow height="9.36" radius="5.935" width="16.38">
+                     <color>
+                        <Color red="0.10619883239269257" green="0.005614035297185183" blue="0.12631578743457794" opacity="0.5" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Circle>
+            <Label fx:id="score" layoutX="465.0" layoutY="351.0" prefHeight="82.0" prefWidth="111.0" text="6/6" textFill="#5a02b2">
+               <font>
+                  <Font name="Calibri Bold" size="72.0" />
+               </font>
+            </Label>
          </children>
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" choke="0.01" height="98.2" radius="24.05" width="0.0">
+               <color>
+                  <Color red="0.15434697270393372" green="0.18569721281528473" blue="0.38947367668151855" />
+               </color>
+            </InnerShadow>
+         </effect>
       </AnchorPane>
    </center>
 </BorderPane>

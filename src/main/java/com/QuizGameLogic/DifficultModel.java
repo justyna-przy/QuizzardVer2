@@ -1,17 +1,30 @@
-package com.Classes;
+package com.QuizGameLogic;
+
+import com.Classes.QuestionData;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class DifficultModel extends QuizModel{
+public class DifficultModel extends QuizModel implements SixQuestionQuiz{
     public DifficultModel(String difficulty) {
+
         super(); //call constructor of the superclass
+
         this.questions = loadDiff(difficulty); //get questions of certain difficulty and add to questions List
         Collections.shuffle(this.questions); //shuffle filtered questions.
-        currentIndex = 0;
 
+        loadSixQuestions();
+
+    }
+
+
+    @Override
+    public void loadSixQuestions() {
+
+        //method used for getting only (the first) six questions
+        questions = questions.subList(0, Math.min(6, questions.size()));
+        currentIndex = 0;
     }
 
     private List<QuestionData> loadDiff(String difficulty) {

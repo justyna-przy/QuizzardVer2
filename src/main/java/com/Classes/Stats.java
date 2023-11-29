@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Stats {
@@ -13,19 +14,19 @@ public class Stats {
      */
 
     private List<UserScores> scores;
-    public Stats(){
+    public Stats(String filepath){
 
-        scores = loadCSVScores();
+        scores = loadCSVScores(filepath);
     }
 
 
     //loads all the csv scores from csv file and adds them to a List
-    public List<UserScores> loadCSVScores() {
+    public List<UserScores> loadCSVScores(String filepath) {
 
         List<UserScores> userScoreList = new ArrayList<>();
         try{
-            String filePath = "src/main/resources/stats.csv";
-            BufferedReader reader = new BufferedReader(new FileReader(filePath));
+
+            BufferedReader reader = new BufferedReader(new FileReader(filepath));
 
             String line;
             while((line = reader.readLine()) != null) {
@@ -199,15 +200,14 @@ public class Stats {
 
 
 
-    public List<Double> findYourScore(String yourUsername){
+    public List<Double> findYourScore(String yourUsername, String filePath){
         List<Double> yourScores = new ArrayList<>();
         try{
-            String filePath = "src/main/resources/stats.csv";
+
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
 
             String line;
             while((line = reader.readLine()) != null) {
-
 
                 List<String> parts = List.of(line.split(","));
                 String username = parts.get(0).trim();
@@ -218,24 +218,57 @@ public class Stats {
                         Double trimmedScore = Double.parseDouble(trimmedScoreStr);
                         yourScores.add(trimmedScore);
 
-
-
-
                     }
-
                 }
-
-
-
-
             }
 
         }catch (Exception e){
             e.printStackTrace();
         }
-
         return yourScores;
+    }
 
+    public List<String> getUsernameList(){
+        List<String> usernameList = new ArrayList<>();
+
+        try{
+            String filePath = "src/main/resources/surv.csv";
+            BufferedReader reader = new BufferedReader(new FileReader(filePath));
+
+            String line;
+            while((line = reader.readLine()) != null) {
+
+                List<String> parts = List.of(line.split(","));
+                String username = parts.get(0).trim();
+                usernameList.add(username);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return usernameList;
+    }
+
+    public List<SurvData> findHighScores(){
+        List<SurvData> highScoreList = new ArrayList<>();
+        List<String> usernameList = getUsernameList();
+        double highScore;
+
+        for(String username: usernameList){
+            List<Double> yourHighScore = findYourScore(username, "src/main/resources/surv.csv");
+            Collections.sort(yourHighScore);
+
+            if (!yourHighScore.isEmpty()) {
+                int lastIndex = yourHighScore.size() - 1;
+                String lastElement = String.valueOf(yourHighScore.get(lastIndex));
+                highScore = Double.parseDouble(lastElement);
+
+                SurvData survData = new SurvData(username, highScore);
+                highScoreList.add(survData);
+            }
+        }
+
+        return highScoreList;
     }
 
 

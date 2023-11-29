@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9D8DF1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.SignUp">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9D8DF1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.SignIn.SignUp">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7B44D2;" BorderPane.alignment="CENTER">
          <children>
@@ -34,7 +34,7 @@
                   <Font name="Calibri Bold" size="61.0" />
                </font>
             </Text>
-            <PasswordField fx:id="confirmpass" layoutX="204.0" layoutY="475.0" prefHeight="46.0" prefWidth="319.0" promptText="Confirm Password" style="-fx-background-color: #FFFAF0; -fx-border-color: #5A02B2;">
+            <PasswordField fx:id="confirmpass" layoutX="204.0" layoutY="375.0" prefHeight="46.0" prefWidth="319.0" promptText="Confirm Password" style="-fx-background-color: #FFFAF0; -fx-border-color: #5A02B2;">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font>
@@ -42,7 +42,7 @@
                   <Blend />
                </effect>
             </PasswordField>
-            <PasswordField fx:id="password" layoutX="204.0" layoutY="420.0" prefHeight="46.0" prefWidth="319.0" promptText="Password" style="-fx-background-color: #FFFAF0; -fx-border-color: #5A02B2;">
+            <PasswordField fx:id="password" layoutX="204.0" layoutY="320.0" prefHeight="46.0" prefWidth="319.0" promptText="Password" style="-fx-background-color: #FFFAF0; -fx-border-color: #5A02B2;">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font>
@@ -50,17 +50,12 @@
                   <Blend />
                </effect>
             </PasswordField>
-            <Label layoutX="47.0" layoutY="345.0" text="Username" textFill="#5a02b2">
+            <Label layoutX="47.0" layoutY="230.0" text="Username" textFill="#5a02b2">
                <font>
                   <Font name="Calibri Bold" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="47.0" layoutY="425.0" text="Password" textFill="#5a02b2">
-               <font>
-                  <Font name="Calibri Bold" size="30.0" />
-               </font>
-            </Label>
-            <Label layoutX="47.0" layoutY="264.0" text="Email" textFill="#5a02b2">
+            <Label layoutX="47.0" layoutY="325.0" text="Password" textFill="#5a02b2">
                <font>
                   <Font name="Calibri Bold" size="30.0" />
                </font>
@@ -73,7 +68,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="username" layoutX="204.0" layoutY="340.0" prefHeight="46.0" prefWidth="319.0" promptText="Username" style="-fx-background-color: #FFFAF0; -fx-border-color: #5A02B2;">
+            <TextField fx:id="username" layoutX="204.0" layoutY="230.0" prefHeight="46.0" prefWidth="319.0" promptText="Username" style="-fx-background-color: #FFFAF0; -fx-border-color: #5A02B2;">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font>
@@ -81,14 +76,21 @@
                   <Blend />
                </effect>
             </TextField>
-            <TextField fx:id="email" layoutX="204.0" layoutY="260.0" prefHeight="46.0" prefWidth="319.0" promptText="Email" style="-fx-background-color: #FFFAF0; -fx-border-color: #5A02B2;">
+            <Text fill="#5a02b2" layoutX="65.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password must have a minimum length of 8 and maximum of 14">
                <font>
-                  <Font name="Calibri" size="20.0" />
+                  <Font name="Berlin Sans FB" size="16.0" />
                </font>
-               <effect>
-                  <Blend />
-               </effect>
-            </TextField>
+            </Text>
+            <Text fill="#5a02b2" layoutX="65.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username must have a minimum length of 6 and maximum of 20">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="#5a02b2" layoutX="65.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passwords and Usernames may contain only letters, numbers and underscores" wrappingWidth="417.04010009765625">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </right>

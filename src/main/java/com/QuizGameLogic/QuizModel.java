@@ -1,18 +1,22 @@
-package com.Classes;
+package com.QuizGameLogic;
+import com.Classes.QuestionData;
+
 import java.util.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
-import java.util.Random;
-/*
-    This Class is the most important class in the program, It is inherited by the two other QuizModels
-    (TopicModel, DifficultModel).
-    Defines the functionality of the Random quiz mode and Timer Mode.
 
+/**
+ *  File: QuizModel
+ *  Author: Justyna Przyborska
+ *  -------------------------
+ *  QuizModel is Class used for inheritance by DifficultModel, TopicModel, RandomModel, and TimerModel.
+ *  It defines the logic behind the quiz.
+ *  The subclass objects are instantiated and used in the QuizController.
+ *
  */
 
 
-public class QuizModel {
+public abstract class QuizModel {
 
     protected List<QuestionData> questions;
     protected int currentIndex;
@@ -33,9 +37,14 @@ public class QuizModel {
     }
 
 
+    /**
+     * Reads the questionbank csv file and creates QuestionData objects from the csv data.
+     *
+     * @return  the List of QuestionData Objects
+     */
 
 
-    private List<QuestionData> loadFromCSV(){ //loading the questions from the csv and adding them to a List
+    protected List<QuestionData> loadFromCSV(){ //loading the questions from the csv and adding them to a List
         List<QuestionData> questionList = new ArrayList<>();
         try {
             String filePath = "src/main/resources/questionbank.csv";
@@ -76,7 +85,7 @@ public class QuizModel {
             e.printStackTrace();
         }
 
-        return questionList; //returning the list of QuestionData objects
+        return questionList;
     }
 
 }

@@ -1,4 +1,5 @@
 ﻿What is the opposite of true in Boolean logic?,False ,True  ,Binary,Undefined,Discrete,easy
+What is Chris's favourite colour?,green,red,blue,orange,Discrete,hard
 What is the meaning of the XOR symbol?,The exclusive OR operation,"is an acronym for ""Extra OR,",Logical addition of two binary numbers,Nand,Discrete,easy
 What is the cardinality of the null set?,Zero,Minus One,Five terabytes,Two,Discrete,medium
 What term is used to describe a collection of objects without any specific order or repetition?,Combination,Permutation,Factorial,Sequence,Discrete,medium
@@ -14,5 +15,4 @@ What is the primary function of a Central Processing Unit?,To execute instructio
 Which of the following is correct and in correct order?,Fetch-Decode-Execute Cycle.,Decode-Fetch-Execute Cycle.,Execute-Decode-Fetch Cycle.,Execute-Fetch-Decode Cycle.,Comporg,easy
 Define Von Neumann architecture in computer organization.,A computer architecture that uses a single memory for both data and instructions.,It is an inefficient way to organize memory.,It is a type of bus.,It is in charge of efficiently deleting cache.,Comporg,medium
 What are the common number systems used in computer science.,Binary decimal octal and hexadecimal.,Binary double octal and integer.,Float double integer and long.,Boolean decimal octal and hexadecimal.,Comporg,medium
-Convert the binary number 1101 to decimal.,13,14,15,16,Comporg,hard
 What is Moores Law?,The number of transistors on a microchip doubles approximately every two years.,The assertion that computer performance remains constant over time.,The idea that computer memory capacity decreases as technology advances.,The principle that software complexity should increase at a steady rate.,Comporg,hard
