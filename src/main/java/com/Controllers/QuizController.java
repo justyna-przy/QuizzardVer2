@@ -4,12 +4,11 @@ import com.Classes.*;
 import com.QuizGameLogic.*;
 import com.Services.SceneChanger;
 import com.Services.ScoreHandler;
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.RadioButton;
+
 
 
 
@@ -34,16 +33,16 @@ public class QuizController {
 
 
 
-    public void goHome(ActionEvent event) throws IOException {
+    public void goHome() throws IOException {
         SceneChanger.changeScene("/home.fxml");
     }
 
-    public void goToStats(ActionEvent event) throws IOException {
+    public void goToStats() throws IOException {
         SceneChanger.changeScene("/stats.fxml");
     }
 
-    public void exitApp(ActionEvent event){
-
+    public void exitApp() throws IOException {
+        SceneChanger.changeScene("/home.fxml");
     }
 
 
@@ -74,7 +73,7 @@ public class QuizController {
 
 
     @FXML
-    private void onNextButtonClicked(ActionEvent event) {
+    private void onNextButtonClicked() {
         if(userChoice == null){
             return;
         }
@@ -108,7 +107,6 @@ public class QuizController {
 
             } else {
 
-                System.out.println("Load Question QuizController score page");
                 scorePage();
 
             }
@@ -147,21 +145,21 @@ public class QuizController {
     }
 
     @FXML
-    public void opt1clicked(ActionEvent event){
+    public void opt1clicked(){
         userChoice = opt1.getText();
     }
     @FXML
-    public void opt2clicked(ActionEvent event){
+    public void opt2clicked(){
         userChoice = opt2.getText();
     }
 
     @FXML
-    public void opt3clicked(ActionEvent event){
+    public void opt3clicked(){
         userChoice = opt3.getText();
     }
 
     @FXML
-    public void opt4clicked(ActionEvent event){
+    public void opt4clicked(){
         userChoice = opt4.getText();
     }
 

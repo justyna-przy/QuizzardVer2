@@ -5,7 +5,6 @@ import com.Services.SceneChanger;
 import com.Services.ScoreHandler;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
@@ -22,8 +21,10 @@ public class SurvivalController extends QuizController{
 
 
     private Timeline timeline;
-    private int totalCentiseconds = 30 * 100; // 30 seconds, convert to centiseconds
+    private final int totalCentiseconds = 30 * 100; // 30 seconds
     private int centisecondsRemaining = totalCentiseconds;
+
+
 
 
     // Flag to check if the score has been set
@@ -64,12 +65,11 @@ public class SurvivalController extends QuizController{
         super.loadQuestion(quizMode);
         startTimer();
 
-
     }
 
 
     @FXML
-    private void onNextButtonClicked(ActionEvent event) throws IOException {
+    private void onNextButtonClicked() throws IOException {
         if (userChoice == null) {
             return;
         } else if (userChoice.equals(currentQuestion.getCorrectAnswer())) {

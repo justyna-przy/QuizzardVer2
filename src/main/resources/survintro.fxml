@@ -50,7 +50,7 @@
             </Label>
             <ImageView fitHeight="119.0" fitWidth="315.0" layoutX="17.0" layoutY="33.0">
                <image>
-                  <Image url="@QuizzardLogo.png" />
+                  <Image url="@images/QuizzardLogo.png" />
                </image>
             </ImageView>
             <Button id="survivalNav" fx:id="exit" layoutX="774.0" layoutY="60.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="59.0" prefWidth="166.0" style="-fx-background-color: #5a02b2; -fx-border-radius: 30; -fx-border-color: ffd858; -fx-border-width: 3; -fx-background-radius: 30;" stylesheets="@CSS/styles.css" text="Give up?" textFill="#9c8df0">
@@ -63,7 +63,7 @@
             </Button>
             <ImageView fitHeight="137.0" fitWidth="125.0" layoutX="311.0" layoutY="522.0">
                <image>
-                  <Image url="@quizzard1.png" />
+                  <Image url="@images/quizzard1.png" />
                </image>
             </ImageView>
             <Text fill="#5a02b2" layoutX="335.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Will you survive this Epic Challenge?" textAlignment="CENTER" wrappingWidth="327.0882873535156">

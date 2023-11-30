@@ -76,8 +76,6 @@ public abstract class QuizModel {
                     QuestionData questionData = new QuestionData(question, options, ans1, diff, topic);
                     questionList.add(questionData);
                 }
-                else {
-                }
             }
             reader.close();
 

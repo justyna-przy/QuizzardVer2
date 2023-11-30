@@ -3,7 +3,6 @@ package com.Controllers;
 import com.Services.SceneChanger;
 import javafx.animation.PauseTransition;
 import javafx.animation.ScaleTransition;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -48,16 +47,19 @@ public class HomeController {
     }
     public void startSurvival() throws IOException {
 
+
+        //circle animation
         circle.setFill(Color.web("#5a02b2"));
         ScaleTransition scaleTransition = new ScaleTransition(Duration.seconds(1), circle);
-        scaleTransition.setToX(80); // Set the final scale factor for the X-axis
-        scaleTransition.setToY(80); // Set the final scale factor for the Y-axis
+        scaleTransition.setToX(80);
+        scaleTransition.setToY(80);
         scaleTransition.play();
 
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
+
         pause.setOnFinished(event -> {
             try {
-                // Move the scene-changing logic here
+
                 SceneChanger.changeScene("/survintro.fxml");
             } catch (IOException e) {
                 e.printStackTrace(); // Handle the exception appropriately

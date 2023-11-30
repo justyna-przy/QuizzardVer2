@@ -52,7 +52,7 @@
             </Button>
             <ImageView fitHeight="119.0" fitWidth="315.0" layoutY="7.0">
                <image>
-                  <Image url="@QuizzardLogo.png" />
+                  <Image url="@images/QuizzardLogo.png" />
                </image>
             </ImageView>
          </children>
@@ -92,7 +92,7 @@
             <ImageView fitHeight="291.0" fitWidth="135.0" layoutX="66.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="296.0" fitWidth="268.0" layoutX="146.0" layoutY="268.0">
                <image>
-                  <Image url="@quizzard1.png" />
+                  <Image url="@images/quizzard1.png" />
                </image>
             </ImageView>
             <Text fill="#5a02b2" layoutX="404.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Well done, Apprentice!" textAlignment="CENTER" wrappingWidth="223.726806640625">

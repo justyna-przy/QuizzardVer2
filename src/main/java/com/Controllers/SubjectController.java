@@ -1,7 +1,6 @@
 package com.Controllers;
 
 import com.Services.SceneChanger;
-import javafx.application.Platform;
 import java.io.IOException;
 
 public class SubjectController {

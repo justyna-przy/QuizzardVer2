@@ -2,8 +2,6 @@ package com.Controllers;
 
 import com.Services.SceneChanger;
 import com.Services.ScoreHandler;
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -41,13 +39,13 @@ public class ScoreController {
         double scoreInt = ScoreHandler.getScore();
         int calculatedPercentage = (int) ((scoreInt/6) * 100);
 
-        score.setText(Integer.toString(ScoreHandler.getScore()) + "/6");
-        percentage.setText(String.valueOf("You got " + calculatedPercentage + "%!"));
+        score.setText(ScoreHandler.getScore() + "/6");
+        percentage.setText("You got " + calculatedPercentage + "%!");
 
 
     }
 
-    public void onNextButtonClicked(ActionEvent event) throws IOException {
+    public void onNextButtonClicked() throws IOException {
         SceneChanger.changeScene("/stats.fxml");
     }
 }

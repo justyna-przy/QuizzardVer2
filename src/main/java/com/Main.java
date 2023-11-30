@@ -30,15 +30,15 @@ public class Main extends Application {
 
 
     public static CurrentUser getCurrentUser() {
-
         return currentUser;
     }
 
-    public static void setCurrentUser(CurrentUser user) {
 
+    public static void setCurrentUser(CurrentUser user) {
         currentUser = user;
     }
 
+    //starting point for the GUI
     @Override
     public void start(Stage stage) throws IOException { //jfx starting point
         stg = stage;
@@ -47,10 +47,12 @@ public class Main extends Application {
         //this sets the initial scene to the login scene, it is the first thing the user sees
         Parent root = FXMLLoader.load(getClass().getResource("/login.fxml"));
 
-        Image image = new Image(String.valueOf(getClass().getResource("/Qlogo.png")));
+        //adding an icon
+        Image image = new Image(String.valueOf(getClass().getResource("/images/Qlogo.png")));
         stage.getIcons().add(image);
 
         stage.setTitle("Quizzard");
+        //the set aspect ratio for the quiz cannot be changed
         stage.setScene(new Scene(root, 1024 ,768));
         stage.show();
     }

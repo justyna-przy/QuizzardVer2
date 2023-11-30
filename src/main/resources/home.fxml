@@ -48,7 +48,7 @@
             </Button>
             <ImageView fitHeight="119.0" fitWidth="315.0" layoutY="7.0">
                <image>
-                  <Image url="@QuizzardLogo.png" />
+                  <Image url="@images/QuizzardLogo.png" />
                </image>
             </ImageView>
          </children>

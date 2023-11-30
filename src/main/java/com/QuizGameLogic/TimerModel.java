@@ -3,8 +3,7 @@ package com.QuizGameLogic;
 public class TimerModel extends QuizModel {
     public TimerModel(){
 
-        super();
+        super(); //calling super-constructor
     }
 
-    //TODO: finish the timer model inheritance and maybe make a seperate surival quiz and score scene
 }
